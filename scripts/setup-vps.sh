@@ -6,7 +6,7 @@
 set -euo pipefail
 
 # ── CONFIGURATION — edit these before running ────────────────────────────────
-REPO_URL="https://github.com/ayaanoski/mailer-us.git"
+REPO_URL="https://github.com/Tuhin810/EmailPostal.git"
 APP_DIR="/opt/mailer-us"
 
 MONGO_URI="mongodb+srv://tuhinthakur1233:DY2p354LuqgXPef0@cluster0.r5uuwtr.mongodb.net/MAIL_DB?retryWrites=true&w=majority&appName=Cluster0"

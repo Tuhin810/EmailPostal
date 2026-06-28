@@ -48,7 +48,7 @@ log "Node.js $(node -v) installed"
 # ── 3. PM2 ────────────────────────────────────────────────────────────────────
 info "Installing PM2..."
 npm install -g pm2 --silent
-pm2 startup systemd -u root --hp /root | tail -1 | bash >/dev/null 2>&1
+pm2 startup systemd -u root --hp /root | tail -1 | bash >/dev/null 2>&1 || true
 log "PM2 installed"
 
 # ── 4. Docker ─────────────────────────────────────────────────────────────────

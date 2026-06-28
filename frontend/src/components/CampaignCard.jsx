@@ -178,20 +178,25 @@ export default function CampaignCard({ campaign, onLaunch }) {
             </svg>
             Duplicate
           </button>
-          {campaign.status === 'Draft' && (
-            <button
-              onClick={(e) => { e.stopPropagation(); onLaunch(campaign._id); }}
-              className="h-7 px-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-[10px] font-semibold rounded-lg transition-all duration-150 active:scale-95 cursor-pointer shadow-[0_4px_10px_rgba(59,130,246,0.2)] hover:shadow-[0_6px_14px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-1"
-              type="button"
-            >
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-              </svg>
-              Launch
-            </button>
-          )}
+
         </div>
+
       </div>
+
+      {campaign.status === 'Draft' && (
+        <button
+          onClick={(e) => { e.stopPropagation(); onLaunch(campaign._id); }}
+          className="py-3 px-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-[10px] font-semibold rounded-full text-center flex items-center justify-center gap-2 transition-all duration-150 active:scale-95 cursor-pointer shadow-[0_4px_10px_rgba(59,130,246,0.2)] hover:shadow-[0_6px_14px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-1"
+          type="button"
+        >
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+          </svg>
+          <div className="flex items-center gap-1 text-[14px] font-semibold">
+            Launch
+          </div>
+        </button>
+      )}
     </article>
   );
 }

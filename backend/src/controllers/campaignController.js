@@ -266,11 +266,7 @@ const launchCampaign = async (req, res) => {
         },
         opts: {
           jobId: `${campaign._id.toString()}-${recipient._id.toString()}`,
-          attempts: 3,
-          backoff: {
-            type: 'exponential',
-            delay: 5000
-          }
+          attempts: 1
         }
       };
     });
